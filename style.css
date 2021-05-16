@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.header {
+  background-color: rgb(185, 185, 185);
+  padding: 30px 20px;
+}
+
+.header h1 {
+  font-size: 25px;
+  font-family: "Anton", sans-serif;
+}
+
+#least td {
+  color: honeydew;
+  font-weight: bold;
+}

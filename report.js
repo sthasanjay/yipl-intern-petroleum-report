@@ -25,15 +25,17 @@ const fetchData = async () => {
       ...mtoData,
     ];
 
+    const colorsArr = ["table-primary", "table-secondary", "table-success", "table-danger", "table-warning", "table-info", "table-light"];
+    
     let output = document.getElementById("allpost");
     finalData.forEach((element) => {
-      output.innerHTML += `<tr >
-         <td class = "one"> ${element.year}</td>
-         <td class = "one"> ${element.petroleum_product}</td>
-         <td class = "one"> ${element.sale}</td>
-         <td class = "one"> ${element.country}</td> 
-         </tr>
-         `;
+      const randomColor = Math.floor(Math.random() * colorsArr.length);
+      output.innerHTML += "<tr >" +
+      "<td class =" + colorsArr[randomColor] + ">" + element.petroleum_product + "</td>" +
+         "<td class =" + colorsArr[randomColor] + ">" + element.year + "</td>" +
+         "<td class =" + colorsArr[randomColor] + ">" + element.sale + "</td>" +
+         "<td class =" + colorsArr[randomColor] + ">" + element.country +"</td>" + 
+         "</tr>";
     });
 
     // Average Calculation
@@ -338,15 +340,16 @@ const fetchData = async () => {
       leastMTOSale
     );
 
+    const bgArr = ["bg-primary", "bg-secondary", "bg-success", "bg-danger", "bg-warning", "bg-info"];
+
     let leastOutput = document.getElementById("least");
     leastArr.forEach((element) => {
-      leastOutput.innerHTML += `<tr >
-      <td class = "one"> ${element.petroleum_product}</td>
-      <td class = "one"> ${element.year}</td>
-      <td class = "one"> ${element.sale}</td>
-     
-      </tr>
-      `;
+      const randomColor = Math.floor(Math.random() * bgArr.length);
+      leastOutput.innerHTML +=  "<tr >" +
+      "<td class =" + bgArr[randomColor] + ">" + element.petroleum_product + "</td>" +
+         "<td class =" + bgArr[randomColor] + ">" + element.year + "</td>" +
+         "<td class =" + bgArr[randomColor] + ">" + element.sale + "</td>" +
+         "</tr>";;
     });
   } catch (error) {
     console.log(error);
